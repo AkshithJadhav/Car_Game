@@ -1,5 +1,6 @@
 command=""
 started = False
+wrng_ans=1
 while True:
     command = input("-> ").lower()
     if command == "start":
@@ -23,5 +24,8 @@ quit -> Quit Game
     elif command == "quit":
         break
     else:
-        print("Enter a correct option")    
+        print("Enter a correct option")
+        wrng_ans+=1
+        if wrng_ans == 4:
+            print("Use 'help' command")    
     
